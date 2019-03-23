@@ -1,0 +1,14 @@
+To get rid of errors - 2>/dev/null 
+To get the size of a file- stat -c %s filename.ext
+To search find a file with a specific permissions
+-find -type f -user username -group groupname
+add an -o after a name to add additional user or groupnames
+finding unique non-repeating lines in a file - sort file.ext | uniq -u
+finding duplicate lines in a file - sort file.ext 
+To extract a gzip file from stdout use zcat, similarly for a bzip2 file use bzcat
+You can log into a server by using the private key stored in a txt file. Then use the i option when logging into the server by mentioning the file. This is potentially a very powerful thing and probably super stupid for anyone to do. I should get rid of mine too I guess.
+For the next level I gottta figure ou how to cnnect to server using a localhost a port. To do this all one needs to do is use openssl s_client with the connect option to the localhost
+To find the number of server listening on a port use nmap, with the A option(All open and listening ports), to see the ecnrytion they deploy use the -sV option.
+Looks like there is a way to disable psuedo bash allocation, rely on the servers bash profile. To bypass use the option T.
+So when I first looked at the bandit20-do file it had a red highlight around it,I took this as indicative of the fact that maybe this file is dead ink to something else. But the linger version of te long list of the file revealed that the file has elevated permissions, and that it is owned by bandit20 and bandit19. I still don't get what that means, only that this thing can execute files that only bandit20 can access.
+
